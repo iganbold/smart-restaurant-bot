@@ -22,7 +22,7 @@ router.post('/', (req,res)=> {
       let timeOfEvent = entry.time;
 
       entry.messaging.forEach((event) => {
-        if(event.messaging) {
+        if(event.message) {
           receivedMessage(event);
         } else {
           console.log("Webhook received unknown event: ", event);
